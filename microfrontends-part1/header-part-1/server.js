@@ -11,7 +11,7 @@ server.get('/', (req, res) => {
     const htmlPath = path.resolve(__dirname, 'build', 'index.html');
 
     fs.readFile(htmlPath, 'utf8', (err, html) => {
-        const rootElem = '<div id="header-root">';
+        //const rootElem = '<div id="header-root">';
         // const renderedApp = renderToString(React.createElement(App, null));
         // renderedString = html.replace(rootElem, rootElem + renderedApp);
         // console.log(renderedString);
