@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () =>
-  <div>
+  <header>
     <h1>Logo</h1>
     <nav>
       <ul>
@@ -9,4 +9,4 @@ export default () =>
         <li>Contact</li>
       </ul>
     </nav>
-  </div>;
+  </header>;

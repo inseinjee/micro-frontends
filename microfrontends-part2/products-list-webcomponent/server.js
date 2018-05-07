@@ -11,18 +11,16 @@ server.get('/', (req, res) => {
     const htmlPath = path.resolve(__dirname, 'build', 'index.html');
 
     fs.readFile(htmlPath, 'utf8', (err, html) => {
-        const rootElem = '<div id="header-root">';
-        // const renderedApp = renderToString(React.createElement(App, null));
-        // renderedString = html.replace(rootElem, rootElem + renderedApp);
-        // console.log(renderedString);
-        //res.send(renderedString);
-        res.send(html);
+        const rootElem = '<microfrontends-products-list>';
+        const renderedApp = renderToString(React.createElement(App, null));
+        const renderedHtml = html.replace(rootElem, rootElem + renderedApp);
+        res.send(renderedHtml);
     });
 });
 
 server.use(express.static('build'));
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8082;
 server.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });

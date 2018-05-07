@@ -13,7 +13,7 @@ server.get('/', (req, res) => {
     fs.readFile(htmlPath, 'utf8', (err, html) => {
         res.send(html);
         //const rootElem = '<div id="root">';
-       // const renderedApp = renderToString(React.createElement(App, null));
+        //const renderedApp = renderToString(React.createElement(App, null));
         //res.send(html.replace(rootElem, rootElem + renderedApp));
     });
 });
